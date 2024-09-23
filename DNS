@@ -1,0 +1,12 @@
+## Cleared DNS Cache
+
+function Clear-DnsCache {
+    try {
+        Write-Host "Clearing DNS Client Cache..." -ForegroundColor Cyan
+        Clear-DnsClientCache
+        Write-Host "DNS Client Cache cleared successfully." -ForegroundColor Green
+    } catch {
+        Write-Host "An error occurred: $_" -ForegroundColor Red
+    }
+}
+Clear-DnsCache
